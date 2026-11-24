@@ -1,0 +1,192 @@
+
+.new-arrivals {
+  padding: 70px 4%;
+  background:  #f5f0e7;
+  color: #454637;
+}
+
+.arrivals-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.arrivals-eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #777b62;
+  margin-bottom: 12px;
+}
+
+.arrivals-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.arrivals-heading h2 em {
+  font-weight: 400;
+}
+
+.arrivals-heading > p:last-child {
+  color: #777568;
+  font-size: 14px;
+}
+
+.arrivals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.arrival-card {
+  min-width: 0;
+}
+
+.arrival-image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: #e9e4d8;
+}
+
+.arrival-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.arrival-image:hover img {
+  transform: scale(1.04);
+}
+
+.arrival-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 9px;
+  background: #f7f3e9;
+  color: #454637;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.arrival-card h3 {
+  margin: 14px 0 7px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.arrival-price {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #454637;
+}
+
+.arrivals-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.view-all-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 15px 24px;
+  background: #414334;
+  color: #faf8f0;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  transition: background 0.3s ease;
+}
+
+.view-all-button:hover {
+  background: #62654e;
+}
+
+@media (max-width: 768px) {
+  .arrivals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 16px;
+  }
+
+  .new-arrivals {
+    padding: 50px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-arrivals {
+    padding: 40px 16px;
+  }
+
+  .arrivals-heading {
+    margin-bottom: 28px;
+  }
+
+  .arrivals-grid {
+    gap: 22px 12px;
+  }
+
+  .arrival-card h3 {
+    font-size: 12px;
+  }
+
+  .arrival-label {
+    top: 8px;
+    left: 8px;
+    font-size: 8px;
+  }
+}
+
+
+
+.arrival-categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.arrival-categories button {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+  padding: 10px 22px;
+  border: 1px solid #747c63;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #59614b;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.arrival-categories button.active,
+.arrival-categories button:hover {
+  background-color: #747c63;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .arrival-categories {
+    gap: 8px;
+  }
+
+  .arrival-categories button {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,357 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Sticky Header */
+
+.lyura-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Announcement Bar */
+
+.announcement-bar {
+  width: 100%;
+  min-height: 35px;
+  padding: 8px 10px;
+  background: #414334;
+  color: #faf8f0;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.lyura-navbar {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px 4.8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: #f7f3e9;
+  border-bottom: 1px solid #ded8cb;
+}
+
+.lyura-logo {
+  flex-shrink: 0;
+  color: #454637;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 52px;
+  letter-spacing: 7px;
+  line-height: 1;
+}
+
+.lyura-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2.2vw, 30px);
+}
+
+.lyura-nav-links a {
+  position: relative;
+  padding: 10px 0;
+  color: #45443a;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.lyura-nav-links a:hover {
+  color: #8a896e;
+}
+
+.lyura-nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #454637;
+}
+
+.lyura-nav-icons {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 20px;
+}
+
+.lyura-nav-icons a {
+  display: flex;
+  color: #45443a;
+  transition: color 0.3s ease;
+}
+
+.lyura-nav-icons a:hover {
+  color: #929078;
+}
+
+.lyura-nav-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Hide hamburger on desktop */
+
+.lyura-menu-toggle {
+  display: none;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .lyura-navbar {
+    min-height: 85px;
+    padding: 18px 3%;
+    gap: 16px;
+  }
+
+  .lyura-logo {
+    font-size: 42px;
+    letter-spacing: 5px;
+  }
+
+  .lyura-nav-links {
+    gap: 14px;
+  }
+
+  .lyura-nav-links a {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .lyura-nav-icons {
+    gap: 13px;
+  }
+
+  .lyura-nav-icons svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .announcement-bar {
+    min-height: auto;
+    padding: 9px 6px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .lyura-navbar {
+    min-height: 76px;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .lyura-logo {
+    font-size: 36px;
+    letter-spacing: 4px;
+  }
+
+  .lyura-nav-icons {
+    margin-left: auto;
+    gap: 15px;
+  }
+
+  .lyura-nav-icons svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lyura-menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #454637;
+    cursor: pointer;
+  }
+
+  .menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 23px;
+  }
+
+  .menu-lines span {
+    display: block;
+    width: 23px;
+    height: 1.5px;
+    background: #454637;
+  }
+
+  .menu-close-icon {
+    font-size: 31px;
+    line-height: 1;
+  }
+
+  .lyura-nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 12px 22px 22px;
+    background: #f7f3e9;
+    border-bottom: 1px solid #ded8cb;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.06);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .lyura-nav-links.mobile-open {
+    display: flex;
+  }
+
+  .lyura-nav-links a {
+    display: block;
+    padding: 15px 0;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #e6e0d5;
+  }
+
+  .lyura-nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .lyura-nav-links a.active::after {
+    display: none;
+  }
+}
+
+/* Small Phones */
+
+@media (max-width: 380px) {
+  .lyura-navbar {
+    padding: 14px 12px;
+    gap: 8px;
+  }
+
+  .lyura-logo {
+    font-size: 29px;
+    letter-spacing: 3px;
+  }
+
+  .lyura-nav-icons {
+    gap: 10px;
+  }
+
+  .lyura-nav-icons svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .lyura-menu-toggle {
+    width: 27px;
+  }
+}
+
+/* Account Dropdown */
+
+.account-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.account-icon {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #3f765c;
+}
+
+.account-icon svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: 38px;
+  right: -10px;
+  width: 180px;
+  padding: 14px;
+  background: #f7f5ef;
+  border: 1px solid #e5e3d9;
+  box-shadow: 0 5px 15px rgba(31, 36, 33, 0.07);
+  z-index: 100;
+  animation: dropdownShow 0.2s ease;
+}
+
+.account-dropdown p {
+  color: #3f765c;
+  font-family: inherit;
+  font-size: 13px;
+  margin: 0 0 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e5e3d9;
+}
+
+.account-dropdown a,
+.account-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  background: #1f4835b0;
+  border: 1px solid #35664f;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.account-dropdown a:hover,
+.account-dropdown button:hover {
+  background: transparent;
+  color: #35664f;
+}
+
+@keyframes dropdownShow {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,185 @@
+
+.about-page {
+  background: #faf9f5;
+  color: #303329;
+  min-height: 100vh;
+  padding: 65px 6%;
+}
+
+.about-story {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-content {
+  padding: 20px 0;
+}
+
+.about-eyebrow {
+  color: #747c63;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.about-content h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(45px, 5vw, 76px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 25px;
+}
+
+.about-content h1 span {
+  color: #747c63;
+  font-style: italic;
+}
+
+.about-content h2 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #59614b;
+}
+
+.about-description {
+  color: #696b61;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 38px;
+}
+
+.about-values > div {
+  min-width: 0;
+}
+
+.value-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eeeee5;
+  color: #59614b;
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.about-values h3 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about-values p {
+  color: #77796f;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.about-image {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 500px;
+  overflow: hidden;
+}
+
+.about-image .story-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0 120px 0 0;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  background: #faf9f5;
+  color: #59614b;
+  padding: 13px 18px;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .about-page {
+    padding: 40px 5%;
+  }
+
+  .about-story {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 30px;
+  }
+
+  .about-values {
+    gap: 12px;
+  }
+
+  .about-image {
+    height: 500px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-page {
+    padding: 30px 5%;
+  }
+
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-content h1 {
+    font-size: 48px;
+  }
+
+  .about-values {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .about-values h3 {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .about-values p {
+    font-size: 11px;
+  }
+
+  .about-image {
+    height: 500px;
+  }
+
+  .about-image .story-image {
+    border-radius: 0 75px 0 0;
+  }
+
+  .image-caption {
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
